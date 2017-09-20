@@ -435,7 +435,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G)->H ): H {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG)
     } catch (e: Exception) {
         closed = true
 
@@ -541,7 +542,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H)->I ): I {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH)
     } catch (e: Exception) {
         closed = true
 
@@ -658,7 +660,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I)->J ): J {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI)
     } catch (e: Exception) {
         closed = true
 
@@ -786,7 +789,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J)->K ): K {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ)
     } catch (e: Exception) {
         closed = true
 
@@ -926,7 +930,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K)->L ): L {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ, argK)
     } catch (e: Exception) {
         closed = true
 
@@ -1077,7 +1082,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L)->M ): M {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL)
     } catch (e: Exception) {
         closed = true
 
@@ -1239,7 +1246,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M)->N ): N {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM)
     } catch (e: Exception) {
         closed = true
 
@@ -1412,7 +1421,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N)->O ): O {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN)
     } catch (e: Exception) {
         closed = true
 
@@ -1596,7 +1607,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)->P ): P {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO)
     } catch (e: Exception) {
         closed = true
 
@@ -1792,7 +1805,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)->Q ): Q {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO, argP)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO, argP)
     } catch (e: Exception) {
         closed = true
 
@@ -1999,7 +2014,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)->R ): R {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO, argP, argQ)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO,
+                argP, argQ)
     } catch (e: Exception) {
         closed = true
 
@@ -2217,7 +2235,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)->S ): S {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO, argP, argQ, argR)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO,
+                argP, argQ, argR)
     } catch (e: Exception) {
         closed = true
 
@@ -2446,7 +2467,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)->T ): T {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO, argP, argQ, argR, argS)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO,
+                argP, argQ, argR, argS)
     } catch (e: Exception) {
         closed = true
 
@@ -2686,7 +2710,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)->U ): U {
     var closed = false
     try {
-        return block(argA, argB, argC, argD, argE, argF, argG, argH, argI, argJ, argK, argL, argM, argN, argO, argP, argQ, argR, argS, argT)
+        return block(argA, argB, argC, argD, argE,
+                argF, argG, argH, argI, argJ,
+                argK, argL, argM, argN, argO,
+                argP, argQ, argR, argS, argT)
     } catch (e: Exception) {
         closed = true
 
