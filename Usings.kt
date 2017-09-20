@@ -30,8 +30,7 @@ import java.io.Closeable
  * @return the result of the [block] function invoked on the 1 resources.
  */
 inline fun <A : Closeable?, B>
-        using(argA: A,
-              block: (A)->B ): B {
+        using( argA: A, block: (A)->B ): B {
     var closed = false
     try {
         return block(argA)
@@ -68,9 +67,7 @@ inline fun <A : Closeable?, B>
  * @return the result of the [block] function invoked on the 2 resources.
  */
 inline fun <A : Closeable?, B : Closeable?, C>
-        using(argA: A,
-              argB: B,
-              block: (A, B)->C ): C {
+        using( argA: A, argB: B, block: (A, B)->C ): C {
     var closed = false
     try {
         return block(argA, argB)
@@ -117,10 +114,7 @@ inline fun <A : Closeable?, B : Closeable?, C>
  * @return the result of the [block] function invoked on the 3 resources.
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              block: (A, B, C)->D ): D {
+        using( argA: A, argB: B, argC: C, block: (A, B, C)->D ): D {
     var closed = false
     try {
         return block(argA, argB, argC)
@@ -177,11 +171,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D>
  * @return the result of the [block] function invoked on the 4 resources.
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              block: (A, B, C, D)->E ): E {
+        using( argA: A, argB: B, argC: C, argD: D,
+               block: (A, B, C, D)->E ): E {
     var closed = false
     try {
         return block(argA, argB, argC, argD)
@@ -248,12 +239,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E>
  * @return the result of the [block] function invoked on the 5 resources.
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?, F>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              block: (A, B, C, D, E)->F ): F {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, block: (A, B, C, D, E)->F ): F {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE)
@@ -331,13 +318,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              block: (A, B, C, D, E, F)->G ): G {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, block: (A, B, C, D, E, F)->G ): G {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE, argF)
@@ -425,14 +407,8 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              block: (A, B, C, D, E, F, G)->H ): H {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, block: (A, B, C, D, E, F, G)->H ): H {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -531,15 +507,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              block: (A, B, C, D, E, F, G, H)->I ): I {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               block: (A, B, C, D, E, F, G, H)->I ): I {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -648,16 +618,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              block: (A, B, C, D, E, F, G, H, I)->J ): J {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, block: (A, B, C, D, E, F, G, H, I)->J ): J {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -776,17 +739,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
  */
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?, K>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              block: (A, B, C, D, E, F, G, H, I, J)->K ): K {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, block: (A, B, C, D, E, F, G, H, I, J)->K ): K {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -916,18 +871,9 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              block: (A, B, C, D, E, F, G, H, I, J, K)->L ): L {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, block: (A, B, C, D, E, F, G, H, I, J, K)->L ): L {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1067,19 +1013,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L)->M ): M {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               block: (A, B, C, D, E, F, G, H, I, J, K, L)->M ): M {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1230,20 +1167,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M)->N ): N {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, block: (A, B, C, D, E, F, G, H, I, J, K, L, M)->N ): N {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1404,21 +1331,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N)->O ): O {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N)->O ): O {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1589,22 +1505,10 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
 inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : Closeable?,
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?, P>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)->P ): P {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O)->P ): P {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1786,23 +1690,11 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?,
         P : Closeable?, Q>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              argP: P,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)->Q ): Q {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, argP: P,
+               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)->Q ): Q {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -1994,24 +1886,11 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?,
         P : Closeable?, Q : Closeable?, R>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              argP: P,
-              argQ: Q,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)->R ): R {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, argP: P,
+               argQ: Q, block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)->R ): R {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -2214,25 +2093,11 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?,
         P : Closeable?, Q : Closeable?, R : Closeable?, S>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              argP: P,
-              argQ: Q,
-              argR: R,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)->S ): S {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, argP: P,
+               argQ: Q, argR: R, block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)->S ): S {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -2445,26 +2310,11 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?,
         P : Closeable?, Q : Closeable?, R : Closeable?, S : Closeable?, T>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              argP: P,
-              argQ: Q,
-              argR: R,
-              argS: S,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)->T ): T {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, argP: P,
+               argQ: Q, argR: R, argS: S, block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S)->T ): T {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
@@ -2687,27 +2537,12 @@ inline fun <A : Closeable?, B : Closeable?, C : Closeable?, D : Closeable?, E : 
         F : Closeable?, G : Closeable?, H : Closeable?, I : Closeable?, J : Closeable?,
         K : Closeable?, L : Closeable?, M : Closeable?, N : Closeable?, O : Closeable?,
         P : Closeable?, Q : Closeable?, R : Closeable?, S : Closeable?, T : Closeable?, U>
-        using(argA: A,
-              argB: B,
-              argC: C,
-              argD: D,
-              argE: E,
-              argF: F,
-              argG: G,
-              argH: H,
-              argI: I,
-              argJ: J,
-              argK: K,
-              argL: L,
-              argM: M,
-              argN: N,
-              argO: O,
-              argP: P,
-              argQ: Q,
-              argR: R,
-              argS: S,
-              argT: T,
-              block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)->U ): U {
+        using( argA: A, argB: B, argC: C, argD: D,
+               argE: E, argF: F, argG: G, argH: H,
+               argI: I, argJ: J, argK: K, argL: L,
+               argM: M, argN: N, argO: O, argP: P,
+               argQ: Q, argR: R, argS: S, argT: T,
+               block: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T)->U ): U {
     var closed = false
     try {
         return block(argA, argB, argC, argD, argE,
